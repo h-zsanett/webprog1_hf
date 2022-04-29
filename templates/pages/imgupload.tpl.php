@@ -13,7 +13,7 @@ if (isset($_POST['kuld']))
             $uzenet[] = " Túl nagy állomány: " . $fajl['name'];
         else 
         {
-            $vegsohely = $MAPPA.strtolower(iconv("UTF-8", "ISO-8859-2", $fajl['name']));        // kisbetűssé alakítja a fájl nevet
+            $vegsohely = $MAPPA.strtolower(iconv("UTF-8", "ASCII//TRANSLIT", $fajl['name']));        // kisbetűssé alakítja a fájl nevet
             if (file_exists($vegsohely))                                                        // Ha a fájl már létezik
                 $uzenet[] = " Már létezik: " . $fajl['name'];
             else {
