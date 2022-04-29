@@ -13,12 +13,15 @@ if (isset($_POST['kuld']))
             $uzenet[] = " Túl nagy állomány: " . $fajl['name'];
         else 
         {
-            $vegsohely = $MAPPA.strtolower(iconv("UTF-8", "ASCII//TRANSLIT", $fajl['name']));        // kisbetűssé alakítja a fájl nevet
+            
+            $ujfilenev_tmp = str_replace(' ', '_', strtolower(iconv("UTF-8", "ASCII//TRANSLIT", $fajl['name'])));
+            $ujfilenev= preg_replace('/[^a-z.A-Z0-9_]+/', '', $ujfilenev_tmp);
+            $vegsohely = $MAPPA.$ujfilenev;        
             if (file_exists($vegsohely))                                                        // Ha a fájl már létezik
-                $uzenet[] = " Már létezik: " . $fajl['name'];
+                $uzenet[] = " Már létezik: " .$ujfilenev;
             else {
                 move_uploaded_file($fajl['tmp_name'], $vegsohely);                              // fájl másolása
-                $uzenet[] = ' Sikeres feltöltés: ' . $fajl['name'];
+                $uzenet[] = ' Sikeres feltöltés: ' . $ujfilenev;
             }
         }
     }
