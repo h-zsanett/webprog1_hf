@@ -8,6 +8,9 @@ $ablakcim = array(
 $header = array(
     'kepforras' => 'logo.png',
     'kepalt' => 'logo',
+    'xmeret' => 29,
+    'ymeret' => 52,
+    'keplink' => 'https://www.nfp.hu/',
 	'cim' => 'Nemzeti Fejlesztési Programiroda',
 	'motto' => ''
 );
@@ -20,14 +23,16 @@ $footer = array(
 
 /*  A menühöz tartozó beállítások  */
 $pages = array(
-	'/'             =>  array('fajl' => 'mainpage', 'szoveg'       => 'Címlap', 'menun'        => array(1,1)),
-	'gallery'       => array('fajl' => 'gallery', 'szoveg'         => 'Galéria', 'menun'       => array(1,1)),
-	'contact'       => array('fajl' => 'contact', 'szoveg'         => 'Kapcsolat', 'menun'     => array(1,1)),
-	'cikkek'        => array('fajl' => 'cikkek', 'szoveg'          => 'Cikkek', 'menun'        => array(1,1)),
-    'sitelogin'     => array('fajl' => 'sitelogin', 'szoveg'       => 'Belépés', 'menun'       => array(1,0)),
-    'logout'        => array('fajl' => 'logout', 'szoveg'          => 'Kilépés', 'menun'       => array(0,1)),
-    'loggedin'      => array('fajl' => 'loggedin', 'szoveg'        => '', 'menun'              => array(0,0)),
-    'reg'           => array('fajl' => 'reg', 'szoveg'             => '', 'menun'              => array(0,0))
+	'/'             =>  array('fajl' => 'mainpage',     'szoveg' => 'Címlap',       'menun' => array(1,1)),
+	'gallery'       => array('fajl' => 'gallery',       'szoveg' => 'Galéria',      'menun' => array(1,1)),
+    'imgupload'     => array('fajl' => 'imgupload',     'szoveg' => 'Kép feltöltése', 'menun' => array(0,1)),
+	'message'       => array('fajl' => 'message',       'szoveg' => 'Üzenet',       'menun' => array(1,1)),
+	'contact'       => array('fajl' => 'contact',       'szoveg' => 'Kapcsolat',    'menun' => array(1,1)),
+	'cikkek'        => array('fajl' => 'cikkek',        'szoveg' => 'Cikkek',       'menun' => array(1,1)),
+    'sitelogin'     => array('fajl' => 'sitelogin',     'szoveg' => 'Belépés',      'menun' => array(1,0)),
+    'logout'        => array('fajl' => 'logout',        'szoveg' => 'Kilépés',      'menun' => array(0,1)),
+    'loggedin'      => array('fajl' => 'loggedin',      'szoveg' => '',             'menun' => array(0,0)),
+    'reg'           => array('fajl' => 'reg',           'szoveg' => '',             'menun' => array(0,0))
 );
 
 $hiba_oldal = array ('fajl' => '404error', 'szoveg' => 'A keresett oldal nem található!');

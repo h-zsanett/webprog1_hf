@@ -9,13 +9,13 @@ th, td {
     font-size: small;
 }
 th {
-    color: #1E459E;
+    color: #5e504b;
     background-color: #c8c8c8;
-    border-top: 5px solid #AABCFE;
+    border-top: 3px solid #544843;
     text-align: center;
 }
 td {
-    color: #7274a5;
-    background-color: #eeeeee;
+    color: #5e504b;
+    background-color: #e0e0e0;
     border-top: 3px solid #FFFFFF;
 }

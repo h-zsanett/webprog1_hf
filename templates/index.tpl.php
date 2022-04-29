@@ -15,7 +15,9 @@
 </head>
 <body>
 	<header>
-		<img src="./images/<?=$header['kepforras']?>" alt="<?=$header['kepalt']?>">
+		<a href="<?=$header['keplink']?>">
+		<img src="./images/<?=$header['kepforras']?>" alt="<?=$header['kepalt']?>" width="<?=$header['xmeret']?>" height="<?=$header['ymeret']?>">
+		</a>
 		<h1><?= $header['cim'] ?></h1>
 		<?php if (isset($header['motto'])) { ?><h2><?= $header['motto'] ?></h2><?php } ?>
 		<?php if(isset($_SESSION['login'])) { ?>Bejelentkezve: <strong><?= $_SESSION['csn']." ".$_SESSION['un']." (".$_SESSION['login'].")" ?></strong><?php } ?>
