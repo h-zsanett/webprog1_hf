@@ -1,21 +1,48 @@
-table {
-    border-collapse: collapse;
+div {
+    width: 99%;           /* az űrlapban lévő DIV doboz szélessége*/
 }
-th, td {
-    padding: 10px 50px 10px 5px;
-    margin: 5px;
+label {
+    line-height: 25px;      /* a labek függőleges mérete */
+    float: right;
+    padding: 0px 10px 0px 0px;
+}
+
+.contactform{
+    font-weight: bold;
     text-align: left;
-    font-family: sans-serif;
-    font-size: small;
+    font-size: medium;
+    padding: 2px;
 }
-th {
-    color: #5e504b;
-    background-color: #c8c8c8;
-    border-top: 3px solid #544843;
-    text-align: center;
+
+.inputfield{
+    text-align: left;
+    font-size: medium;
+    padding: 2px;
 }
-td {
-    color: #5e504b;
-    background-color: #e0e0e0;
-    border-top: 3px solid #FFFFFF;
+
+label input, label textarea {
+    position: relative;
+    left: 10px;
+    
+    float: right;           /* jobbra igazítja az elemet, balról futtatja körbe szöveggel */
+    border: 2px red solid; /* keret minden esetben piros */
+    padding: 2px;
+}
+label > p {
+    float: left;
+}
+
+textarea {
+    width: 350px;           /* beviteli szövegmező szélessége */
+}
+
+input[type="submit"] {
+    float: right;
+    clear: both;
+    padding: 2px;
+}
+
+button {
+    float: right;           /* Egymás mellé teszi a két gombot*/
+    padding: 2px;
 }

@@ -2,9 +2,8 @@
 if(isset($_POST['username']) && isset($_POST['passwd'])) {
     try {
         // Kapcsolódás
-        $dbh = new PDO('mysql:host=localhost;dbname=pll9cs', 'pll9cs', 'p3eLel9cees',
-                        array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
-        $dbh->query('SET NAMES utf8 COLLATE utf8_hungarian_ci');
+        $dbh = new PDO('mysql:host='.$db_host.';dbname='.$db_database, $db_username, $db_passwd, array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
+        $dbh->query($db_query_string);
         
         // Felhasználó keresése
         $sqlSelect = "select id, vezeteknev, keresztnev from users where username = :username and passwd = sha1(:passwd)";

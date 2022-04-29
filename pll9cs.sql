@@ -15,15 +15,33 @@ ENGINE = MYISAM
 CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 INSERT INTO `users` (`id`,`vezeteknev`,`keresztnev`,`username`,`passwd`) VALUES 
- (1,'Családi_1','Utónév_1','Login1',sha1('login1')),
- (2,'Családi_2','Utónév_2','Login2',sha1('login2')),
- (3,'Családi_3','Utónév_3','Login3',sha1('login3')),
- (4,'Családi_4','Utónév_4','Login4',sha1('login4')),
- (5,'Családi_5','Utónév_5','Login5',sha1('login5')),
- (6,'Családi_6','Utónév_6','Login6',sha1('login6')),
- (7,'Családi_7','Utónév_7','Login7',sha1('login7')),
- (8,'Családi_8','Utónév_8','Login8',sha1('login8')),
- (9,'Családi_9','Utónév_9','Login9',sha1('login9')),
- (10,'Családi_10','Utónév_10','Login10',sha1('login10')),
- (11,'Családi_11','Utónév_11','Login11',sha1('login11')),
- (12,'Családi_12','Utónév_12','Login12',sha1('login12'));
+ (1,'Családnév1','Keresztnév1','Login1',sha1('login1')),
+ (2,'Családnév2','Keresztnév2','Login2',sha1('login2')),
+ (3,'Családnév3','Keresztnév3','Login3',sha1('login3')),
+ (4,'Családnév4','Keresztnév4','Login4',sha1('login4')),
+ (5,'Családnév5','Keresztnév5','Login5',sha1('login5')),
+ (6,'Családnév6','Keresztnév6','Login6',sha1('login6')),
+ (7,'Családnév7','Keresztnév7','Login7',sha1('login7')),
+ (8,'Családnév8','Keresztnév8','Login8',sha1('login8')),
+ (9,'Családnév9','Keresztnév9','Login9',sha1('login9')),
+ (10,'Családnév10','Keresztnév10','Login10',sha1('login10')),
+ (11,'Családnév11','Keresztnév11','Login11',sha1('login11')),
+ (12,'Családnév12','Keresztnév12','Login12',sha1('login12'));
+
+CREATE TABLE `messages` (
+  `id` int(10) unsigned     NOT NULL auto_increment,
+  `cimzett` varchar(40) NOT NULL default '',
+  `usernev` varchar(40)     NOT NULL default '',
+  `email` varchar(50) NOT NULL default '',
+  `idopont` datetime  NOT NULL default '2000-01-01 00:00:00',
+  `uzenet` varchar(2000)      NOT NULL default '',
+  PRIMARY KEY  (`id`)
+)
+ENGINE = MYISAM
+CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+INSERT INTO `messages` (`id`,`cimzett`,`usernev`,`email`,`idopont`,`uzenet`) VALUES 
+ (1,'Családnév1','Login1','Vendég','2022-04-29 11:00:07','Szia! Ez az első üzenetem, nem vagyok belépve csak vengégként írok!'),
+ (2,'Családnév2','Login2','Login1','2022-04-29 12:22:51','Beléptem! Vajon megérkezik-e az üzenet'),
+ (3,'Családnév3','Login3','Login1','2022-04-29 13:13:13','Itt is be vagyok lépve, ellenőrizni kell az időpontok helyességét az adatbázisban');
+

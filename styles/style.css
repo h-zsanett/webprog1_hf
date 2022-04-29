@@ -103,7 +103,7 @@ article > #video-wrapper iframe {
 
 div#content {
     display: table-cell;
-    width: 100%;
+    width: 80%;
     border-radius: 10px;
     background-color: #eeeeee;
     padding: 15px;
