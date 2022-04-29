@@ -6,6 +6,11 @@
 	<meta charset="utf-8">
 	<title><?= $ablakcim['cim'] . ( (isset($ablakcim['mottó'])) ? ('|' . $ablakcim['mottó']) : '' ) ?></title>
 	<link rel="stylesheet" href="./styles/style.css" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 	<?php if(file_exists('./styles/'.$keres['fajl'].'.css')) { ?><link rel="stylesheet" href="./styles/<?= $keres['fajl']?>.css" type="text/css"><?php } ?>
 </head>
 <body>
@@ -13,17 +18,21 @@
 		<img src="./images/<?=$header['kepforras']?>" alt="<?=$header['kepalt']?>">
 		<h1><?= $header['cim'] ?></h1>
 		<?php if (isset($header['motto'])) { ?><h2><?= $header['motto'] ?></h2><?php } ?>
-		<?php if(isset($_SESSION['login'])) { ?>Bejlentkezve: <strong><?= $_SESSION['csn']." ".$_SESSION['un']." (".$_SESSION['login'].")" ?></strong><?php } ?>
+		<?php if(isset($_SESSION['login'])) { ?>Bejelentkezve: <strong><?= $_SESSION['csn']." ".$_SESSION['un']." (".$_SESSION['login'].")" ?></strong><?php } ?>
 	</header>
     <div id="wrapper">
         <aside id="nav">
-            <nav>
-                <ul>
+            <nav class="navbar navbar-expand-sm">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+					<span class="navbar-toggler-icon"></span>
+    			</button>
+				<div class="collapse navbar-collapse" id="collapsibleNavbar">
+					<ul class="navbar-nav">
 					<?php foreach ($pages as $url => $page) { 
 						 if(! isset($_SESSION['login']) && $page['menun'][0] || isset($_SESSION['login']) && $page['menun'][1]) { ?>
 						 
-							<li<?= (($page == $keres) ? ' class="active"' : '') ?>>
-							<a href="<?= ($url == '/') ? '.' : ('?page=' . $url) ?>">
+							<li class="nav-item">
+							<a class="nav-link" href="<?= ($url == '/') ? '.' : ('?page=' . $url) ?>">
 							<?= $page['szoveg'] ?></a>
 							</li>
 						<?php } ?>

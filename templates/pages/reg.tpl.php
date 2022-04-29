@@ -8,7 +8,7 @@
         <?php if(isset($uzenet)) { ?>
             <h1><?= $uzenet ?></h1>
             <?php if($ujra) { ?>
-                <a href="index.php?page=login">Próbálja újra!</a>
+                <a href="index.php?page=sitelogin">Próbálja újra!</a>
             <?php } ?>
         <?php } ?>
     </body>  

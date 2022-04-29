@@ -1,5 +1,5 @@
-CREATE DATABASE `pll9cs`
-CHARACTER SET utf8 COLLATE utf8_general_ci;
+DROP DATABASE `pll9cs`;
+CREATE DATABASE `pll9cs` CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 USE `pll9cs`;
 
@@ -14,7 +14,7 @@ CREATE TABLE `users` (
 ENGINE = MYISAM
 CHARACTER SET utf8 COLLATE utf8_general_ci;
 
-INSERT INTO `users` (`id`,`vezeteknev`,`keresztnev`,`login`,`passwd`) VALUES 
+INSERT INTO `users` (`id`,`vezeteknev`,`keresztnev`,`username`,`passwd`) VALUES 
  (1,'Családi_1','Utónév_1','Login1',sha1('login1')),
  (2,'Családi_2','Utónév_2','Login2',sha1('login2')),
  (3,'Családi_3','Utónév_3','Login3',sha1('login3')),

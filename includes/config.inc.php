@@ -24,8 +24,7 @@ $pages = array(
 	'gallery'       => array('fajl' => 'gallery', 'szoveg'         => 'Galéria', 'menun'       => array(1,1)),
 	'contact'       => array('fajl' => 'contact', 'szoveg'         => 'Kapcsolat', 'menun'     => array(1,1)),
 	'cikkek'        => array('fajl' => 'cikkek', 'szoveg'          => 'Cikkek', 'menun'        => array(1,1)),
-    'tablazat'      => array('fajl' => 'tablazat', 'szoveg'        => 'Táblázat', 'menun'      => array(1,1)),
-    'login'         => array('fajl' => 'login', 'szoveg'           => 'Belépés', 'menun'       => array(1,0)),
+    'sitelogin'     => array('fajl' => 'sitelogin', 'szoveg'       => 'Belépés', 'menun'       => array(1,0)),
     'logout'        => array('fajl' => 'logout', 'szoveg'          => 'Kilépés', 'menun'       => array(0,1)),
     'loggedin'      => array('fajl' => 'loggedin', 'szoveg'        => '', 'menun'              => array(0,0)),
     'reg'           => array('fajl' => 'reg', 'szoveg'             => '', 'menun'              => array(0,0))
