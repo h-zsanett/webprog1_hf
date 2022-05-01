@@ -23,25 +23,23 @@
 		<?php if(isset($_SESSION['login'])) { ?>Bejelentkezve: <strong><?= $_SESSION['csn']." ".$_SESSION['un']." (".$_SESSION['login'].")" ?></strong><?php } ?>
 	</header>
     <div id="wrapper">
-        <aside id="nav">
-            <nav class="navbar navbar-expand-sm">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-					<span class="navbar-toggler-icon"></span>
-    			</button>
-				<div class="collapse navbar-collapse" id="collapsibleNavbar">
-					<ul class="navbar-nav">
-					<?php foreach ($pages as $url => $page) { 
-						 if(! isset($_SESSION['login']) && $page['menun'][0] || isset($_SESSION['login']) && $page['menun'][1]) { ?>
-						 
-							<li class="nav-item">
-							<a class="nav-link" href="<?= ($url == '/') ? '.' : ('?page=' . $url) ?>">
-							<?= $page['szoveg'] ?></a>
-							</li>
-						<?php } ?>
+		<nav class="navbar navbar-expand-sm">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav">
+				<?php foreach ($pages as $url => $page) { 
+						if(! isset($_SESSION['login']) && $page['menun'][0] || isset($_SESSION['login']) && $page['menun'][1]) { ?>
+						
+						<li class="nav-item">
+						<a class="nav-link" href="<?= ($url == '/') ? '.' : ('?page=' . $url) ?>">
+						<?= $page['szoveg'] ?></a>
+						</li>
 					<?php } ?>
-                </ul>
-            </nav>
-        </aside>
+				<?php } ?>
+			</ul>
+		</nav>
         <div id="content">
             <?php include("./templates/pages/{$keres['fajl']}.tpl.php"); ?>
         </div>
