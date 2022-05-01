@@ -3,7 +3,7 @@
         <legend>Bejelentkezési adatok:</legend>
         <input class="reg_login_input" type="text" name="username" placeholder="felhasználó" required autofocus><br>
         <input class="reg_login_input" type="password" name="passwd" placeholder="jelszó" required><br>
-        <input type="submit" name="sitelogin" value="Belépés">
+        <input class="reg_login_submit" type="submit" name="sitelogin" value="Belépés">
         <br>&nbsp;
       </fieldset>
     </form>
@@ -16,7 +16,7 @@
         <input class="reg_login_input" type="text" name="keresztnev" placeholder="utónév" required><br>
         <input class="reg_login_input" type="text" name="username" placeholder="felhasználói név" required><br>
         <input class="reg_login_input" type="password" name="passwd" placeholder="jelszó" required><br>
-        <input type="submit" name="reg" value="Regisztráció">
+        <input class="reg_login_submit" type="submit" name="reg" value="Regisztráció">
         <br>&nbsp;
       </fieldset>
     </form>

@@ -172,6 +172,12 @@ div#content header{
     max-width: 300px;
 }
 
+.reg_login_submit{
+    padding: 0px;
+    margin: 5px;
+    font-weight: bold;
+}
+
 #reg_login_form{
     padding: 0px;
     margin: 0px;
